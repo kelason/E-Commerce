@@ -12,7 +12,7 @@ import '@mdi/font/css/materialdesignicons.css'
 import 'vuetify/dist/vuetify.min.css'
 
 axios.defaults.withCredentials = true
-axios.defaults.baseURL = 'http://localhost:8000/'
+axios.defaults.baseURL = 'http://ec2-3-16-216-17.us-east-2.compute.amazonaws.com/'
 //axios.defaults.headers.common["Authorization"] = "Bearer " + localStorage.getItem("authToken")
 
 Vue.use(Vuetify)
