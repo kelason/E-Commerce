@@ -5,7 +5,7 @@ export default {
 
     state: {
         authenticated: false,
-        user: [],
+        user: 0,
         users: [],
         msg: '',
         status_code: ''

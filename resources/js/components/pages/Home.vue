@@ -117,7 +117,7 @@
                     color="deep-purple"
                     dark
                     block
-                    @click="addToCart(post)"
+                    @click.once="addToCart(post), showPost((user == null) ? 0 : user.id), cartCount((user == null) ? 0 : user.id)"
                     v-if="post.post_product.order_status === null || post.post_product.buyer_id != (user === null ? 0 : user.id) || post.post_product.order_status == 'Sold'"
                   >
                     ADD TO CART
@@ -164,6 +164,7 @@ export default {
   },
   mounted() {
     this.showPost((this.user == null) ? 0 : this.user.id)
+    this.cartCount((this.user == null) ? 0 : this.user.id)
   },
   created() {
     this.$store.commit('SET_LAYOUT', 'main-layout')
